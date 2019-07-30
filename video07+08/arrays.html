@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Usando Arrays</title>
+<link rel="stylesheet" href="css/micss.css">
+<script>
+
+var articulos = ['Zapatillas', 'Camisetas', 'Pantalon', 'Calcetines'];
+//var articulos = [];
+	
+</script>
+</head>
+
+<body>
+<div class="contenedor">
+  <div class="header">
+    <p class="logo">JavaScript Arrays <i class="mm">Píldoras Informáticas
+     </p>
+  </div>
+  <div class="contenido">
+    <div class="principal">
+      <h1>Manejando Arrays</h1>
+      <script>
+        //contando cantidad de elementos del array
+        document.write('<p> La cantidad de articulos es <b>' + articulos.length + '</b></p>');
+
+        //accediendo al array
+        document.write('<p> El primer articulo es <b>' + articulos[0] + '</b></p>');
+
+        //accediendo al ultimo elemento
+        document.write('<p> El ultimo articulo es <b>' + articulos[articulos.length-1] + '</b></p>');
+    
+        //agregando elementos al comienzo del array
+        articulos.unshift('Balon');
+        document.write('<p> Ahora el primer articulo es <b>' + articulos[0] + '</b></p>');
+
+        //agregando elementos al final del array
+        articulos.push(prompt('Introduce un articulo:'));
+        document.write('<p> Ahora el primer articulo es <b>' + articulos[articulos.length-1] + '</b></p>')
+        
+        //contando cantidad de elementos del array
+        document.write('<p> Ahora la  cantidad de articulos es <b>' + articulos.length + '</b></p>');  
+        
+        document.write('<p>'+articulos[0]+'<br>');
+        document.write(articulos[1]+'<br>');
+        document.write(articulos[2]+'<br>');
+        document.write(articulos[3]+'<br>');
+        document.write(articulos[4]+'<br>');
+        document.write(articulos[5]+'</p>'); 
+
+        //Eliminar el primer elemento
+        document.write('<p> Borramos el primer elemento del array con shift()</p>');  
+        articulos.shift();
+        document.write('<p>'+articulos[0]+'<br>');
+        document.write(articulos[1]+'<br>');
+        document.write(articulos[2]+'<br>');
+        document.write(articulos[3]+'<br>');
+        document.write(articulos[4]+'</p>');
+
+        //Eliminar el ultimo elemento
+        document.write('<p> Borramos el ultimo elemento del array con pop()</p>');  
+        articulos.pop();
+        document.write('<p>'+articulos[0]+'<br>');
+        document.write(articulos[1]+'<br>');
+        document.write(articulos[2]+'<br>');
+        document.write(articulos[3]+'</p>');
+
+	  </script>
+     </div>
+  </div>
+  
+</div>
+</body>
+</html>
