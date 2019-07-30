@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <label for="msg"></label>
+    <input type="text" name="txt" id="c_mensaje">
+
+    <label for="tries"></label>
+    <input type="text" name="txt" id="c_intentos">
+
+    <script>
+            var aleatorio = Math.round(Math.random()*100);
+            var myNum = 0, intentos = 0;
+    
+            var mensaje = document.getElementById('c_mensaje');
+            var consumidos = document.getElementById('c_intentos');
+
+            do{
+                myNum = prompt('Ingresa un numero entre 0 y 100');
+                if (aleatorio > myNum) {
+                    mensaje.value = 'Mas alto';
+                    mensaje.style.fontSize = '18px';
+                }
+                if (aleatorio < myNum) {
+                    mensaje.value = 'Mas bajo';
+                    mensaje.style.fontSize = '18px';
+                }
+                intentos++;
+
+                consumidos.value = intentos;
+                consumidos.style.fontSize = '18px';
+                consumidos.style.color = 'red';
+                consumidos.style.textAlign = 'center';
+            }while(aleatorio != myNum);
+    
+            mensaje.value = 'Correcto';
+            mensaje.style.color = 'red';
+    </script>
+</body>
+</html>
