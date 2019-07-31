@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .linkdestacacursos{
+            background-color:#F00; 
+        }
+        
+        a{
+            display:block;
+            margin-bottom:20px;
+            font-size:18px;
+        }
+
+        table{
+            text-align:center;
+            border:none;
+        }
+        
+        td{
+            border:none;
+        }
+        
+        #contieneEnlaces {
+            position: absolute;
+            left: 31px;
+            top: 65px;
+            width: 400px;
+            height: 649px;
+            z-index: 1;
+            padding-top:100px;
+        }
+    </style>
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+        crossorigin="anonymous">
+    </script>
+    <script>
+        $(document).ready(function(){
+            $("#cursos").click(function () {
+                $(".ejemplos").removeClass("linkdestacacursos");
+                $(".cursos").addClass("linkdestacacursos");
+            });
+
+            $("#informacion").click(function () {
+                $(".cursos").removeClass("linkdestacacursos");
+                $(".ejemplos").addClass("linkdestacacursos");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="contieneEnlaces">
+        <a href="http://www.pildorasinformaticas.com" target="_blank" class="cursos">
+        Píldoras informáticas
+        </a><br>
+        
+        <a href="http://www.google.com" target="_blank" >
+        Google
+        </a><br>
+        
+        <a href="https://www.youtube.com/user/pildorasinformaticas" target="_blank" class="cursos">
+        Píldoras informáticas YouTube
+        </a><br>
+        
+        <a href="remover_reemplazar.html" target="_blank" class="ejemplos">
+        Remover y reemplazar
+        </a><br>
+        
+        <a href="https://news.google.es/" target="_blank" >
+        Noticias google
+        </a><br>
+        
+        <a href="calculadora_arcaica.html" target="_blank" class="ejemplos">
+        Calculadora
+        </a>
+    </div>
+    <table width="100%" border="1">
+        <tr>
+            <td>
+                Cursos destacados&nbsp;&nbsp;
+                <input type="radio" name="pildoras" value="Cursos" id="cursos">
+            </td>
+            <td>
+                Información adicional&nbsp;&nbsp;
+                <input type="radio" name="pildoras" value="Información" id="informacion">
+            </td>
+        </tr>
+    </table>  
+</body>
+</html>
