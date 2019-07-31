@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #334873; 
+        }
+
+        h1{
+            color:#FC0;
+            text-align: center;
+            border-top:2px solid #FFF;
+            border-bottom:2px solid #FFF;
+            padding:20px;
+        }
+
+        h2{
+            color: aliceblue;
+        }
+
+        p{
+            color:#FC0;
+            text-align: justify;
+        }
+    </style>
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            console.log($("#errors").html());
+            console.log($("#errors h2").html());
+
+            $("#errors").html('<p>Hay Errores</p>');
+            console.log($("#errors").html());
+            console.log($("#errors p").html());
+
+            $("#errors").append('<p>Otros Errores</p>');
+            $("#errors").prepend('<p>Primeros Errores</p>');
+            $(".myContent").css("background-color", "green");
+
+            $("#errors").after('<p>Antes</p>');
+            $("#errors").before('<p>Despues</p>');
+            $("#errors p").text('Cambio de texto');
+        });
+    </script>
+
+
+</head>
+<body>
+    <h1>Curso Jquery</h1>
+    <div id="content">
+        <div class="myContent" id="errors">
+            <h2>Errores</h2>
+        </div>
+    </div>
+</body>
+</html>

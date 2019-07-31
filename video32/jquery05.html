@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #334873; 
+        }
+
+        h1{
+            color:#FC0;
+            text-align: center;
+            border-top:2px solid #FFF;
+            border-bottom:2px solid #FFF;
+            padding:20px;
+        }
+
+        h2{
+            color: aliceblue;
+        }
+
+        p{
+            color:#FC0;
+            text-align: justify;
+        }
+    </style>
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        function validate() {
+            var userName = document.getElementById("user").value;
+            if(userName == ''){
+                $("#user").after("Falto este campo");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" method="post">
+        <input type="text" name="" id="user"><br>
+
+        <input type="text" name="" id="name"><br>
+
+        <input type="text" name="" id="lastname"><br>
+
+        <input type="button" value="Dale" onclick="validate()">
+    </form>
+</body>
+</html>
