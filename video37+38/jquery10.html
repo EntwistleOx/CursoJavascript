@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #primerParrafo{
+            background-color: #F00;
+        }
+    </style>
+
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            var colorFondo = $("#primerParrafo").css("background-color");
+            console.log(colorFondo);
+
+            $("#primerParrafo").css("background-color","green");
+
+            $(".destacado").css("border","2px dotted blue");
+        });
+    </script>
+</head>
+<body>
+    <p id="primerParrafo">Primer Parrafo</p>
+    <p class="destacado">Parrafo destacado</p>
+    <p>Tercer Parrado</p>
+</body>
+</html>
