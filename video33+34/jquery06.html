@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #334873; 
+        }
+
+        h1{
+            color:#FC0;
+            text-align: center;
+            border-top:2px solid #FFF;
+            border-bottom:2px solid #FFF;
+            padding:20px;
+        }
+
+        h2{
+            color: aliceblue;
+        }
+
+        p{
+            color:#FC0;
+            text-align: justify;
+        }
+
+        #banner{
+            background-color: crimson;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 40%;
+            top: 40%;
+            text-align: center;
+        }
+
+        #banner p{
+            text-align: center;
+        }
+
+        img{
+            margin: 10px;
+        }
+
+        #sustituto{
+            font-size: 25px;
+            color: #FC0;
+        }
+    </style>
+    <script 
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+        crossorigin="anonymous">
+    </script>
+
+    <script>
+        $(document).ready(function(){            
+            $("#close").on("click", function() {
+                $("#banner").remove();
+            });
+
+            $("#img1").on("click", function() {
+                $("#img1").replaceWith("<div id='sustituto'>Agregado!</div>");
+            });
+
+            $("#content img").click(function () {
+                $(this).replaceWith("<div id='sustituto'>Agregado!</div>");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Curso Jquery</h1>
+    <div id="banner">
+        Banner de prueba
+        <p id="close">X Cerrar</p>
+    </div>
+
+    <div id="content">
+        <img src="jquery.jpg" alt="" id="img1">
+        <img src="jquery.jpg" alt="" id="img2">
+        <img src="jquery.jpg" alt="" id="img3">
+    </div>
+
+</body>
+</html>
